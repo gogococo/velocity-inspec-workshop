@@ -1,4 +1,5 @@
 ## Side Notes
+* https://www.inspec.io/docs/reference/resources/
 * its($resource_status) { should $command }
   * () describing a value of the resource
   * {}  Assertion
@@ -9,6 +10,21 @@
   * %Q
 * Can negate by doing should_not vs should
   * any matcher can be a negater
+* https://www.inspec.io/docs/reference/resources/yaml/
+* Below example shows tricky syntax for yaml and arrays
+
+```
+name: foo
+array:
+  - zero
+  - one
+```
+```
+describe yaml('filename.yml') do
+  its('name') { should eq 'foo' }
+  its(['array', 1]) { should eq 'one' }
+end
+```
 
 ## Available Matchers
 * be - numerical comparisons

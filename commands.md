@@ -8,4 +8,9 @@
 * inspec exec profiles/00-setup-local
 * vi local_tests.rb
 * inspec exec local_tests.rb
-
+* vi exercises/matchers.rb
+# Fill in the appropriate matchers, run until successful
+* inspec exec exercises/matchers.rb
+* vi local_tests.rb
+# write a new test for OS verification and OS release 
+* inspec exec local_tests.rb
